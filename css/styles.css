@@ -328,16 +328,12 @@ img {
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
     url(../images/people-office1@1x.jpg);
 }
-@media (min-device-pixel-ratio: 2),
-      (min-resolution: 192dpi),
-      (min-resolution: 2dppx) {
-          .hero{
-              background-image: linear-gradient(
-                  rgba(46, 47, 66, 0.7), 
-                  rgba(46, 47, 66, 0.7)), 
-                  url(../images/people-office1@2x.jpg);
-          }
-      }
+@media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
+  .hero {
+    background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
+      url(../images/people-office1@2x.jpg);
+  }
+}
 
 @media screen and (min-width: 429px) {
   .hero {
@@ -729,7 +725,6 @@ img {
   .div-soc {
     margin-bottom: 0px;
   }
-  
 }
 
 .div-soc {
@@ -1001,16 +996,17 @@ img {
   transition: transform var(--anim-fast) 300ms, opacity var(--anim-fast) 300ms;
 }
 @media screen and (max-width: 427px) {
-  .modal{
-    width: 300px; 
+  .modal {
+    width: 300px;
   }
-  .contact-form-input, .form-coment{
+  .contact-form-input,
+  .form-coment {
     max-width: 260px;
   }
   .order-agreement {
     max-width: 260px;
     flex-wrap: wrap;
-}
+  }
 }
 @media screen and (min-width: 768px) {
   .modal {
@@ -1069,13 +1065,13 @@ img {
 
   color: var(--text);
 }
-.order-form{
+.order-form {
   width: auto;
   min-height: 336px;
 }
 @media screen and (min-width: 428px) {
-  .order-form{
-  width: 360px;
+  .order-form {
+    width: 360px;
   }
 }
 .order-form-label {
@@ -1339,8 +1335,8 @@ img {
   font-size: 36px;
   line-height: 40px;
 }
-.active-link{
- color: var(--ctas-focusedActive-statesLink);
+.active-link {
+  color: var(--ctas-focusedActive-statesLink);
 }
 
 .mobile-menu-contacs {
@@ -1376,16 +1372,16 @@ img {
   color: #434455;
 }
 @media screen and (max-width: 427px) {
-.social-burger {
-  display: flex;
-  gap: 40px;
-}
+  .social-burger {
+    display: flex;
+    gap: 40px;
+  }
 }
 @media screen and (min-width: 428px) {
-.social-burger {
-  display: flex;
-  gap: 56px;
-}
+  .social-burger {
+    display: flex;
+    gap: 56px;
+  }
 }
 .social-link-burger {
   display: flex;
