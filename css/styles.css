@@ -26,9 +26,9 @@
   --radius: 4px;
   --anim-fast: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   /*BREAKPOINTS*/
-  --mobile-screen: 480px;
+  --mobile-screen: 428px;
   --tablet: 768px;
-  --desktop: 1200px;
+  --desktop: 1158px;
 }
 
 /*   ANIMATION   */
@@ -257,7 +257,7 @@ img {
   .contacts {
     display: flex;
     flex-direction: column;
-    column-gap: 4px;
+    column-gap: 12px;
   }
 }
 @media screen and (min-width: 1158px) {
@@ -287,10 +287,10 @@ img {
 .mail:focus {
   color: var(--ctas-focusedActive-statesLink);
 }
-.mail,
+/* .mail,
 .tel {
   padding: 24px 0px;
-}
+} */
 .tel {
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
@@ -322,44 +322,44 @@ img {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
   /* phone screen */
   background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-    url(../images/people-office\ 1@1x.jpg);
+    url(../images/people-office1@1x.jpg);
 }
-/* @media (min-device-pixel-ratio: 2),
+@media (min-device-pixel-ratio: 2),
       (min-resolution: 192dpi),
       (min-resolution: 2dppx) {
           .hero{
               background-image: linear-gradient(
                   rgba(46, 47, 66, 0.7), 
                   rgba(46, 47, 66, 0.7)), 
-                  url(../images/people-office1@1x.jpg);
+                  url(../images/people-office1@2x.jpg);
           }
-      } */
+      }
 
 @media screen and (min-width: 429px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/people-office\ 1@1x.jpg);
+      url(../images/people-office1@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office\ 1@2x.jpg);
+        url(../images/people-office1@2x.jpg);
     }
   }
 }
 @media screen and (min-width: 769px) {
   .hero {
     background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-      url(../images/people-office\ 1@1x.jpg);
+      url(../images/people-office1@1x.jpg);
   }
   @media (min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
     .hero {
       background-image: linear-gradient(rgba(46, 47, 66, 0.7), rgba(46, 47, 66, 0.7)),
-        url(../images/people-office\ 1@2x.jpg);
+        url(../images/people-office1@2x.jpg);
     }
   }
 }
@@ -513,7 +513,7 @@ img {
 .our-team {
   background-color: var(--background-light);
 }
-@media screen and (min-width: 760px) and (max-width: 1199px) {
+@media screen and (min-width: 760px) and (max-width: 1157px) {
   .team-conteiner {
     max-width: 582px;
   }
@@ -683,7 +683,7 @@ img {
 }
 @media screen and (min-width: 1158px) {
   .div-footer {
-    gap: 24px;
+    flex-wrap: nowrap;
   }
 }
 
@@ -726,6 +726,10 @@ img {
   .text-soc {
     text-align: inherit;
   }
+  .div-soc {
+    margin-bottom: 0px;
+  }
+  
 }
 
 .div-soc {
@@ -986,7 +990,7 @@ img {
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
 
-  width: 392px;
+  width: 100%;
   padding: 72px 24px 24px 24px;
 
   background: #fcfcfc;
@@ -995,6 +999,18 @@ img {
   border-radius: 4px;
 
   transition: transform var(--anim-fast) 300ms, opacity var(--anim-fast) 300ms;
+}
+@media screen and (max-width: 427px) {
+  .modal{
+    width: 300px; 
+  }
+  .contact-form-input, .form-coment{
+    max-width: 260px;
+  }
+  .order-agreement {
+    max-width: 260px;
+    flex-wrap: wrap;
+}
 }
 @media screen and (min-width: 768px) {
   .modal {
@@ -1053,10 +1069,14 @@ img {
 
   color: var(--text);
 }
-
-.order-form {
-  width: 360px;
+.order-form{
+  width: auto;
   min-height: 336px;
+}
+@media screen and (min-width: 428px) {
+  .order-form{
+  width: 360px;
+  }
 }
 .order-form-label {
   display: block;
@@ -1317,7 +1337,10 @@ img {
 .menu-link-burger {
   font-weight: 700;
   font-size: 36px;
-  line-height: calc(40 / 36);
+  line-height: 40px;
+}
+.active-link{
+ color: var(--ctas-focusedActive-statesLink);
 }
 
 .mobile-menu-contacs {
@@ -1340,7 +1363,7 @@ img {
 }
 @media screen and (max-width: 427px) {
   .tel-burger {
-    font-size: 30px;
+    font-size: 25px;
   }
 }
 .mail-burger {
@@ -1352,9 +1375,17 @@ img {
   letter-spacing: 0.02em;
   color: #434455;
 }
+@media screen and (max-width: 427px) {
+.social-burger {
+  display: flex;
+  gap: 40px;
+}
+}
+@media screen and (min-width: 428px) {
 .social-burger {
   display: flex;
   gap: 56px;
+}
 }
 .social-link-burger {
   display: flex;
